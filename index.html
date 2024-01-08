@@ -11,6 +11,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            position: relative;
         }
 
         video {
@@ -28,24 +29,27 @@
 
         button {
             font-size: 16px;
+            padding: 10px 20px;
             cursor: pointer;
-            border: none;
-            border-radius: 50%; /* Rounded shape */
-            background-color: #3498db; /* Button background color */
-            color: #fff; /* Button text color */
-            padding: 15px; /* Adjust padding as needed */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            border-radius: 8px; /* Slightly rounded edges */
         }
     </style>
 </head>
 <body>
-    <video id="myVideo" src="Love&Beyond - Save the Date.mp4" controls="controls" loop playsinline></video>
-    <button onclick="playVideo()" id="playButton">&#9654;</button>
+    <video id="myVideo" src="Love&Beyond - Save the Date.mp4" controls="controls" muted loop playsinline></video>
+    <button onclick="enableSound()">Enable Sound</button>
 
     <script>
-        function playVideo() {
+        function enableSound() {
             var video = document.getElementById('myVideo');
+            video.muted = false;
             video.play();
-            document.getElementById('playButton').style.display = 'none';
+            document.querySelector('button').style.display = 'none';
         }
     </script>
 </body>
