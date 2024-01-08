@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatiple" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <style>
-        .responsive_video {
-            width: 100%;
-            min_width: 500px;
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        video {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
             height: auto;
+        }
+
+        @media (min-width: 731px) {
+            video {
+                max-width: none; /* Remove the max-width for larger screens */
+            }
         }
     </style>
 </head>
 <body>
-    <video src="Love&Beyond - Save the Date.mp4" controls="controls" style="max-width: 730px;">
-</video>
-    <video width="100%" controls>
-    	<source src="video.mp4" type="video/mp4" class="responsive_video">
-    	Your browser does not support the video tag.
-     </video>
+    <video src="Love&Beyond - Save the Date.mp4" controls="controls"></video>
 </body>
 </html>
-
