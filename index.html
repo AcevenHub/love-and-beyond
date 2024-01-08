@@ -3,33 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Pages Video Autoplay</title>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        video {
-            width: auto;
-            height: auto;
-            object-fit: cover;
-        }
-
-        @media (max-width: 600px) {
-            /* Adjust styles for smaller screens if needed */
-        }
-    </style>
 </head>
 <body>
-    <video id="autoplayVideo" autoplay loop playsinline>
-        <source src="Love&Beyond - Save the Date.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <video src="Love&Beyond - Save the Date.mp4" controls="controls" style="max-width: 730px;">
+</video>
 </body>
 </html>
 
