@@ -11,6 +11,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            position: relative;
         }
 
         video {
@@ -25,9 +26,31 @@
                 max-width: none; /* Remove the max-width for larger screens */
             }
         }
+
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            border-radius: 8px; /* Slightly rounded edges */
+        }
     </style>
 </head>
 <body>
-    <video src="Love&Beyond - Save the Date.mp4" controls="controls"></video>
+    <video id="myVideo" src="Love&Beyond - Save the Date.mp4" controls="controls" muted loop playsinline></video>
+    <button onclick="enableSound()">Enable Sound</button>
+
+    <script>
+        function enableSound() {
+            var video = document.getElementById('myVideo');
+            video.muted = false;
+            video.play();
+            document.querySelector('button').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
