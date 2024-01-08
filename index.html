@@ -25,9 +25,28 @@
                 max-width: none; /* Remove the max-width for larger screens */
             }
         }
+
+        button {
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 50%; /* Rounded shape */
+            background-color: #3498db; /* Button background color */
+            color: #fff; /* Button text color */
+            padding: 15px; /* Adjust padding as needed */
+        }
     </style>
 </head>
 <body>
-    <video src="Love&Beyond - Save the Date.mp4" controls="controls" loop playsinline></video>
+    <video id="myVideo" src="Love&Beyond - Save the Date.mp4" controls="controls" loop playsinline></video>
+    <button onclick="playVideo()" id="playButton">&#9654;</button>
+
+    <script>
+        function playVideo() {
+            var video = document.getElementById('myVideo');
+            video.play();
+            document.getElementById('playButton').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
