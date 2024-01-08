@@ -2,11 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatiple" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .responsive_video {
+            width: 100%;
+            min_width: 500px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <video src="Love&Beyond - Save the Date.mp4" controls="controls" style="max-width: 730px;">
 </video>
+    <video width="100%" controls>
+    	<source src="video.mp4" type="video/mp4" class="responsive_video">
+    	Your browser does not support the video tag.
+     </video>
 </body>
 </html>
 
